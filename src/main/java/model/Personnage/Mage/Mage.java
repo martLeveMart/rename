@@ -2,6 +2,7 @@ package model.Personnage.Mage;
 
 import model.Personnage.Personnage;
 
+
 /* Déclaration des méthodes
 Historique:
 
