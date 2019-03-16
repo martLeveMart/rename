@@ -39,9 +39,8 @@ public class Mage extends Personnage {
         this.intell = 20;
         if(mana < 0)
             mana = 0;
-        mana += this.intell;
-        this.mana = mana;
-        this.manaMax = mana;
+        this.mana = mana + this.intell;
+        this.manaMax = mana + this.intell/2;
     }
 
     public void presentation(){
