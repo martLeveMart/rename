@@ -22,7 +22,8 @@ Historique:
 */
 public class Mage extends Personnage {
 
-    protected int mana = 0;
+    protected int mana;
+    protected int manaMax;
 
     public Mage(){
 
@@ -35,6 +36,7 @@ public class Mage extends Personnage {
     public Mage(String name, int life, int mana) {
         super(name, life);
         this.mana = mana;
+        this.manaMax = mana;
     }
 
     public void presentation(){
