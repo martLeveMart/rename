@@ -25,7 +25,7 @@ abstract public class Personnage {
     }
 
     public void takeDmg(int dmg){
-        life -= dmg;
+        life -= dmg > 0 ? dmg : 0;
         if(life < 0)
             life = 0;
     }

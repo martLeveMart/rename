@@ -9,12 +9,26 @@ public class MageTest {
     public void testTakeDmg(){
         //Given
         Mage mage = new Mage("Merlin", 100);
+        Mage mage2 = new Mage("Merlin", 100);
 
         //When
-        mage.takeDmg(20);
+        mage.takeDmg(50);
+        mage2.takeDmg(160);
 
         //Then
-        Assertions.assertEquals(80, mage.getLife());
-        mage.presentation(); //tes
+        Assertions.assertEquals(50, mage.getLife());
+        Assertions.assertEquals(0, mage2.getLife());
+    }
+
+    @Test
+    public void testTakeDmgNeg(){
+        //Given
+        Mage mage = new Mage("Merlin", 100);
+
+        //When
+        mage.takeDmg(-20);
+
+        //Then
+        Assertions.assertEquals(100, mage.getLife());
     }
 }
