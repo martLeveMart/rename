@@ -25,11 +25,13 @@ public class Mage extends Personnage {
     protected int manaMax;
 
     public Mage(){
-
+        super();
+        this.intell = 20;
     }
 
     public Mage(String name, int life) {
         super(name, life);
+        this.intell = 20;
     }
 
     public Mage(String name, int life, int mana) {
@@ -38,6 +40,7 @@ public class Mage extends Personnage {
             mana = 0;
         this.mana = mana;
         this.manaMax = mana;
+        this.intell = 20;
     }
 
     public void presentation(){

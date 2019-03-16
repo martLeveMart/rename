@@ -12,8 +12,10 @@ History:
         1.1 : 16/03/2019
             ajout attribut:
                 *streng: int dommage de base en combat
+                * intell
             déclaration des méthodes :
                 *coup: inflige des dégats physiques à l'adversaire
+                * calcPhyDmg() retour les dégats physique du perso
 */
 
 abstract public class Personnage {
@@ -24,6 +26,7 @@ abstract public class Personnage {
 
     //attribut afficher
     protected int streng;
+    protected int intell;
 
     public void takeDmg(int dmg){
         life -= dmg;
@@ -54,6 +57,7 @@ abstract public class Personnage {
     public Personnage(String name, int life){
         this.name = name;
         this.streng = 5;
+        this.intell = 5;
         if(life < 0)
             life = 0;
         this.life = life;
@@ -69,6 +73,14 @@ abstract public class Personnage {
 
     public void setStreng(int streng) {
         this.streng = streng;
+    }
+
+    public int getIntell() {
+        return intell;
+    }
+
+    public void setIntell(int intell) {
+        this.intell = intell;
     }
 
     public int getLifeMax() {
@@ -95,8 +107,17 @@ abstract public class Personnage {
         this.life = life;
     }
 
+    //TODO a supprime quand plus de test à effectuer
+    /*
+     Retourne la liste des différents stats
+     */
     public void presentation(){
         String pres = "Je m'appel " + name + ", je possède " + life + " point de vie.";
         System.out.println(pres);
+    }
+
+    public void getStat(){
+        System.out.println("Force : " + this.streng);
+        System.out.println("Inteligence : " + this.intell);
     }
 }
