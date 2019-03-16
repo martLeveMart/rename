@@ -5,13 +5,13 @@ import model.Personnage.Personnage;
 /* Déclaration des méthodes
 Historique:
 
-            1.0 : 09/12/2016
+            1.0 : 15/03/2019
                 déclaration des méthodes :
                     *Mage: constructeur par défaut du Mage
                     *Mage(string nom, int mana, int vie): constructeur
                     *Presentation: Affiche les caractéristique pour le Mage
 
-            1.2 : 30/12/2016
+            1.1 : 16/03/2019
                 *CoupDeBaton: inflige des dégats physiques à l'adversaire
                 *TraitMagique: inflige des dégats magiques à l'adversaire
                 *SurchargeMagique: détermine si il reste du mana au mage
@@ -35,6 +35,8 @@ public class Mage extends Personnage {
 
     public Mage(String name, int life, int mana) {
         super(name, life);
+        if(mana < 0)
+            mana = 0;
         this.mana = mana;
         this.manaMax = mana;
     }

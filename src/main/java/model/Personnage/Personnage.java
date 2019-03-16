@@ -2,7 +2,7 @@ package model.Personnage;
 
 /*Déclaration des méthodes
 History:
-        1.0 : 09/12/2016
+        1.0 : 15/03/2019
             déclaration des méthodes :
                 *Personnages : Le constructeur par défaut du Personnage
                 *Personnages(int vie, string nom) : constructeur 1
@@ -22,8 +22,10 @@ abstract public class Personnage {
 
     public Personnage(String name, int life){
         this.name = name;
+        if(life < 0)
+            life = 0;
         this.life = life;
-        this.lifeMax = life;
+        lifeMax = life;
     }
 
     public void takeDmg(int dmg){

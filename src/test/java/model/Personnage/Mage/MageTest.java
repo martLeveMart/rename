@@ -2,34 +2,26 @@ package model.Personnage.Mage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class MageTest {
 
-    @Test
-    public void testTakeDmg(){
-        //Given
-        Mage mage = new Mage("Merlin", 100);
-        Mage mage2 = new Mage("Merlin", 100);
-
-        //When
-        mage.takeDmg(50);
-        mage2.takeDmg(160);
-
-        //Then
-        Assertions.assertEquals(50, mage.getLife());
-        Assertions.assertEquals(0, mage2.getLife());
-    }
-
-    @Test
-    public void testTakeDmgNeg(){
+    @ParameterizedTest
+    @CsvSource({
+            "50, 50",
+            "150, 0",
+            "-20, 100"
+    })
+    public void testTakeDmg(int dmg, int life){
         //Given
         Mage mage = new Mage("Merlin", 100);
 
         //When
-        mage.takeDmg(-20);
+        mage.takeDmg(dmg);
 
         //Then
-        Assertions.assertEquals(100, mage.getLife());
+        Assertions.assertEquals(life, mage.getLife());
 
     }
 }
