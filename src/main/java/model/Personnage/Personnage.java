@@ -14,6 +14,7 @@ History:
                 *streng: int dommage de base en combat
             déclaration des méthodes :
                 *coup: inflige des dégats physiques à l'adversaire
+                * calcPhyDmg() retour les dégats physique du perso
 */
 
 abstract public class Personnage {
