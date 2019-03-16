@@ -12,6 +12,7 @@ History:
         1.1 : 16/03/2019
             ajout attribut:
                 *streng: int dommage de base en combat
+                * intell
             déclaration des méthodes :
                 *coup: inflige des dégats physiques à l'adversaire
                 * calcPhyDmg() retour les dégats physique du perso
