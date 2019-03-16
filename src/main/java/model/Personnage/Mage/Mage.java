@@ -36,11 +36,12 @@ public class Mage extends Personnage {
 
     public Mage(String name, int life, int mana) {
         super(name, life);
+        this.intell = 20;
         if(mana < 0)
             mana = 0;
+        mana += this.intell;
         this.mana = mana;
         this.manaMax = mana;
-        this.intell = 20;
     }
 
     public void presentation(){
