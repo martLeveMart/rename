@@ -12,7 +12,6 @@ Historique:
                     *Presentation: Affiche les caractéristique pour le Mage
 
             1.1 : 16/03/2019
-                *CoupDeBaton: inflige des dégats physiques à l'adversaire
                 *TraitMagique: inflige des dégats magiques à l'adversaire
                 *SurchargeMagique: détermine si il reste du mana au mage
                 Ajout d'un objet inventaire

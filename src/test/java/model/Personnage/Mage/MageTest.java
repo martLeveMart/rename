@@ -24,4 +24,24 @@ public class MageTest {
         Assertions.assertEquals(life, mage.getLife());
 
     }
+
+    @ParameterizedTest
+    @CsvSource({
+            "150, 15, 85",
+            "105, 11, 89",
+            "-20, 0, 100"
+    })
+    public void testCoup(int force, int dmg, int life){
+        //Given
+        Mage mageAtt = new Mage("Barnabeus", 100);
+        Mage mageDef = new Mage("Merlin", 100);
+
+        //When
+        mageAtt.setStreng(force);
+        mageAtt.coup(mageDef);
+
+        //Then
+        Assertions.assertEquals(dmg, mageAtt.calcPhyDmg());
+        Assertions.assertEquals(life, mageDef.getLife());
+    }
 }
