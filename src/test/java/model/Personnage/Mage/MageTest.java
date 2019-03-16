@@ -30,5 +30,6 @@ public class MageTest {
 
         //Then
         Assertions.assertEquals(100, mage.getLife());
+
     }
 }
