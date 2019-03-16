@@ -14,6 +14,7 @@ abstract public class Personnage {
 
     protected String name;
     protected int life;
+    protected int lifeMax;
 
     public Personnage(){
 
@@ -22,17 +23,28 @@ abstract public class Personnage {
     public Personnage(String name, int life){
         this.name = name;
         this.life = life;
+        this.lifeMax = life;
     }
 
     public void takeDmg(int dmg){
-        life -= dmg > 0 ? dmg : 0;
+        life -= dmg;
         if(life < 0)
             life = 0;
+        if(life > lifeMax)
+            life = lifeMax;
     }
 
     public void presentation(){
         String pres = "Je m'appel " + name + ", je possède " + life + " point de vie.";
         System.out.println(pres);
+    }
+
+    public int getLifeMax() {
+        return lifeMax;
+    }
+
+    public void setLifeMax(int lifeMax) {
+        this.lifeMax = lifeMax;
     }
 
     public String getName() {
