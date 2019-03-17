@@ -2,6 +2,8 @@ package model.Personnage.Mage;
 
 import model.Personnage.Personnage;
 
+import java.util.Scanner;
+
 /* Déclaration des méthodes
 Historique:
 
@@ -45,6 +47,14 @@ public class Mage extends Personnage {
         }else {
             System.out.println("Pas assez de mana");
         }
+    }
+
+    void surchargeMagique(){
+        //Va taper dans les hp quand plus assez de mana si autorisé par le mage
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Plus assez de mana taper dans les pv?");
+        String str = sc.nextLine();
+        System.out.println("Vous avez saisi :" + str);
     }
 
     /*
