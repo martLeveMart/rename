@@ -44,4 +44,29 @@ public class MageTest {
         Assertions.assertEquals(dmg, mageAtt.calcPhyDmg());
         Assertions.assertEquals(life, mageDef.getLife());
     }
+
+    @ParameterizedTest
+    @CsvSource({
+            "150, 75, 25, 1, 90",
+            "105, 53, 47, 1, 90",
+            "-20, 0, 100, 1, 90",
+            "40, 20, 0, 5, 50",
+            "10, 5, 50, 11, 0"
+    })
+    public void testTraitMagique(int pui, int dmg, int life, int nbrAtt, int mana){
+        //Given
+        Mage mageAtt = new Mage("Barnabeus", 100, 100);
+        Mage mageDef = new Mage("Merlin", 100, 100);
+
+        //When
+        mageAtt.setPui(pui);
+        for (int i = 0; i < nbrAtt; i++){
+            mageAtt.traitMagique(mageDef);
+        }
+
+        //Then
+        Assertions.assertEquals(mana + mageAtt.getIntell()/2, mageAtt.getMana());
+        Assertions.assertEquals(dmg, mageAtt.calcMagDmg());
+        Assertions.assertEquals(life, mageDef.getLife());
+    }
 }
