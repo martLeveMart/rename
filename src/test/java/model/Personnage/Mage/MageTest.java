@@ -68,5 +68,6 @@ public class MageTest {
         Assertions.assertEquals(mana + mageAtt.getIntell()/2, mageAtt.getMana());
         Assertions.assertEquals(dmg, mageAtt.calcMagDmg());
         Assertions.assertEquals(life, mageDef.getLife());
+        Assertions.assertEquals(life, mageAtt.getLife());
     }
 }

@@ -25,6 +25,7 @@ public class Mage extends Personnage {
 
     protected int mana;
     protected int manaMax;
+    protected boolean activeSurcharge;
 
     protected int calcMagDmg(){
         double dmg = Math.ceil(this.pui/2.0);
@@ -41,25 +42,49 @@ public class Mage extends Personnage {
     }
 
     void traitMagique(Personnage cible){
-        if (mana > 10){
-            mana -= 10;
+        int COUT = 10;
+
+        if (mana > COUT){
+            mana -= COUT;
             cible.takeDmg(this.calcMagDmg());
-        }else {
+        }else if (this.surchargeMagique(COUT)){
+            cible.takeDmg(this.calcMagDmg());
+        }else{
             System.out.println("Pas assez de mana");
         }
     }
 
-    void surchargeMagique(){
-        //Va taper dans les hp quand plus assez de mana si autorisé par le mage
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Plus assez de mana taper dans les pv?");
-        String str = sc.nextLine();
-        System.out.println("Vous avez saisi :" + str);
+    public boolean surchargeMagique(int overMana){
+        int manaManquant = overMana - mana;
+        if (activeSurcharge){
+            mana = 0;
+            life -= manaManquant*2;
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /*
     Déclaration des getters setters
      */
+
+    public int getManaMax() {
+        return manaMax;
+    }
+
+    public void setManaMax(int manaMax) {
+        this.manaMax = manaMax;
+    }
+
+    public boolean isActiveSurcharge() {
+        return activeSurcharge;
+    }
+
+    public void setActiveSurcharge(boolean activeSurcharge) {
+        this.activeSurcharge = activeSurcharge;
+    }
+
     public int getMana() {
         return mana;
     }
@@ -84,6 +109,7 @@ public class Mage extends Personnage {
         super(name, life);
         this.intell = 15;
         this.pui = 40;
+        this.activeSurcharge = true;
         if(mana < 0)
             mana = 0;
         this.mana = mana + this.intell/2;
