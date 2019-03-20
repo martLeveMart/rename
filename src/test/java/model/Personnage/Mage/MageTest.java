@@ -27,6 +27,24 @@ public class MageTest {
 
     @ParameterizedTest
     @CsvSource({
+            "50, 125, 150",
+            "21, 110, 120",
+            "-21, 110, 110"
+    })
+    public void testSetIntell(int intell, int mana, int manaMax){
+        //Given
+        Mage mage = new Mage("Merlin", 100, mana);
+
+        //When
+        mage.setIntell(intell);
+
+        //Then
+        Assertions.assertEquals(manaMax, mage.getManaMax());
+
+    }
+
+    @ParameterizedTest
+    @CsvSource({
             "150, 15, 85",
             "105, 11, 89",
             "-20, 0, 100"
@@ -43,5 +61,54 @@ public class MageTest {
         //Then
         Assertions.assertEquals(dmg, mageAtt.calcPhyDmg());
         Assertions.assertEquals(life, mageDef.getLife());
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "150, 75, 25, 1, 90",
+            "105, 53, 47, 1, 90",
+            "-20, 0, 100, 1, 90",
+            "40, 20, 0, 5, 50",
+            "10, 5, 50, 11, 0"
+    })
+    public void testTraitMagiqueWithoutSurcharge(int pui, int dmg, int life, int nbrAtt, int mana){
+        //Given
+        Mage mageAtt = new Mage("Barnabeus", 100, 100);
+        Mage mageDef = new Mage("Merlin", 100, 100);
+
+        //When
+        mageAtt.setActiveSurcharge(false);
+        mageAtt.setPui(pui);
+        for (int i = 0; i < nbrAtt; i++){
+            mageAtt.traitMagique(mageDef);
+        }
+
+        //Then
+        Assertions.assertEquals(mana + mageAtt.getIntell()/2, mageAtt.getMana());
+        Assertions.assertEquals(dmg, mageAtt.calcMagDmg());
+        Assertions.assertEquals(life, mageDef.getLife());
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "100, 0, 107",
+            "100, 2, 87",
+            "94, 11, 0",
+            "14, 15, 0"
+    })
+    public void testTraitMagiqueWithSurcharge(int lifeAtt, int nbrAtt, int mana){
+        //Given
+        Mage mageAtt = new Mage("Barnabeus", 100, 100);
+        Mage mageDef = new Mage("Merlin", 100, 100);
+
+        //When
+        mageAtt.setPui(25);
+        for (int i = 0; i < nbrAtt; i++){
+            mageAtt.traitMagique(mageDef);
+        }
+
+        //Then
+        Assertions.assertEquals(mana, mageAtt.getMana());
+        Assertions.assertEquals(lifeAtt, mageAtt.getLife());
     }
 }
