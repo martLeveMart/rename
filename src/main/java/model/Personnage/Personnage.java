@@ -113,6 +113,8 @@ abstract public class Personnage {
 
     public void setLife(int life) {
         this.life = life;
+        //TODO pour détruire l'objet il faudrat le retirer de l'objet world auquel il sera associé
+        //à faire quand le monde sera créer en attend test des hp (si trop chiant ajouter un bool vivant)
     }
 
     //TODO a supprime quand plus de test à effectuer

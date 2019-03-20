@@ -16,6 +16,8 @@ Historique:
             1.1 : 16/03/2019
                 *TraitMagique: inflige des dégats magiques à l'adversaire
                 *SurchargeMagique: détermine si il reste du mana au mage
+
+                //pas encore ajouter
                 Ajout d'un objet inventaire
                     *Mage(string nom, int mana, int vie, Objet): constructeur 2
                 Ajout d'une méthode d'attaque
