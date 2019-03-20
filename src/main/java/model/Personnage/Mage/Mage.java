@@ -58,7 +58,7 @@ public class Mage extends Personnage {
         int manaManquant = overMana - mana;
         if (activeSurcharge){
             mana = 0;
-            life -= manaManquant*2;
+            this.setLife(life - manaManquant*2);
             return true;
         }else{
             return false;
@@ -90,7 +90,18 @@ public class Mage extends Personnage {
     }
 
     public void setMana(int mana) {
-        this.mana = mana;
+        if (mana > manaMax)
+            this.mana = manaMax;
+        else
+            this.mana = mana;
+    }
+
+    public void setIntell(int intell) {
+        if (intell < 0)
+            intell = 0;
+        int manaBonus = this.intell/2;
+        manaMax = manaMax - manaBonus + intell/2;
+        super.setIntell(intell);
     }
 
     /*
@@ -112,8 +123,8 @@ public class Mage extends Personnage {
         this.activeSurcharge = true;
         if(mana < 0)
             mana = 0;
-        this.mana = mana + this.intell/2;
         this.manaMax = mana + this.intell/2;
+        this.mana = this.manaMax;
     }
 
     //TODO à virer V1 finit
