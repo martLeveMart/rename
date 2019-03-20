@@ -11,8 +11,9 @@ History:
 
         1.1 : 16/03/2019
             ajout attribut:
-                *streng: int dommage de base en combat
-                * intell
+                * int streng: dommage de base en combat
+                * int intell: augmente la second barre
+                * int pui: dommage de base des sorts
             déclaration des méthodes :
                 *coup: inflige des dégats physiques à l'adversaire
                 * calcPhyDmg() retour les dégats physique du perso
@@ -27,6 +28,7 @@ abstract public class Personnage {
     //attribut afficher
     protected int streng;
     protected int intell;
+    protected int pui;
 
     public void takeDmg(int dmg){
         life -= dmg;
@@ -40,12 +42,9 @@ abstract public class Personnage {
         cible.takeDmg(this.calcPhyDmg());
     }
 
-    public int calcPhyDmg(){
-        double dmg = Math.ceil(this.streng/10.0);
-        if(dmg < 0)
-            dmg = 0;
-        return (int)dmg;
-    }
+    abstract public int calcPhyDmg();
+
+    abstract protected int calcMagDmg();
 
     /*
     Déclaration des contructeurs
@@ -58,6 +57,7 @@ abstract public class Personnage {
         this.name = name;
         this.streng = 5;
         this.intell = 5;
+        this.pui = 10;
         if(life < 0)
             life = 0;
         this.life = life;
@@ -73,6 +73,14 @@ abstract public class Personnage {
 
     public void setStreng(int streng) {
         this.streng = streng;
+    }
+
+    public int getPui() {
+        return pui;
+    }
+
+    public void setPui(int pui) {
+        this.pui = pui;
     }
 
     public int getIntell() {
@@ -105,6 +113,8 @@ abstract public class Personnage {
 
     public void setLife(int life) {
         this.life = life;
+        //TODO pour détruire l'objet il faudrat le retirer de l'objet world auquel il sera associé
+        //à faire quand le monde sera créer en attend test des hp (si trop chiant ajouter un bool vivant)
     }
 
     //TODO a supprime quand plus de test à effectuer
