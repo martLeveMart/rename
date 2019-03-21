@@ -92,10 +92,7 @@ public class Mage extends Personnage {
     }
 
     public void setMana(int mana) {
-        if (mana > manaMax)
-            this.mana = manaMax;
-        else
-            this.mana = mana;
+        this.mana = mana > manaMax ? manaMax : mana;
     }
 
     public void setIntell(int intell) {
