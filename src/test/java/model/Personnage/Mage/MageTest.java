@@ -29,7 +29,8 @@ public class MageTest {
     @CsvSource({
             "50, 125, 150",
             "21, 110, 120",
-            "-21, 110, 110"
+            "-21, 110, 110",
+            "20, -10, 10"
     })
     public void testSetIntell(int intell, int mana, int manaMax){
         //Given
@@ -110,5 +111,15 @@ public class MageTest {
         //Then
         Assertions.assertEquals(mana, mageAtt.getMana());
         Assertions.assertEquals(lifeAtt, mageAtt.getLife());
+    }
+
+    @Test
+    public void testSetMana(){
+        Mage mage = new Mage();
+
+        mage.setManaMax(10);
+        mage.setMana(20);
+
+        Assertions.assertEquals(10, mage.getMana());
     }
 }
