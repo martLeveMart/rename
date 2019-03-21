@@ -42,6 +42,10 @@ abstract public class Personnage {
         cible.takeDmg(this.calcPhyDmg());
     }
 
+    public void soigner(int life){
+        this.setLife(this.getLife() + life);
+    }
+
     abstract public int calcPhyDmg();
 
     abstract protected int calcMagDmg();
@@ -49,9 +53,7 @@ abstract public class Personnage {
     /*
     Déclaration des contructeurs
      */
-    public Personnage(){
-
-    }
+    public Personnage(){}
 
     public Personnage(String name, int life){
         this.name = name;
@@ -112,7 +114,7 @@ abstract public class Personnage {
     }
 
     public void setLife(int life) {
-        this.life = life;
+        this.life = life > lifeMax ? lifeMax : life;
         //TODO pour détruire l'objet il faudrat le retirer de l'objet world auquel il sera associé
         //à faire quand le monde sera créer en attend test des hp (si trop chiant ajouter un bool vivant)
     }

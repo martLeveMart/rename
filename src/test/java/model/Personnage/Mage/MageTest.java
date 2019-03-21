@@ -122,4 +122,13 @@ public class MageTest {
 
         Assertions.assertEquals(10, mage.getMana());
     }
+
+    //Test pour le 100% de getter
+    @Test
+    public void testMageTestFin(){
+        Mage mage = new Mage();
+
+        Boolean isActiv = mage.isActiveSurcharge();
+        mage.presentation();
+    }
 }

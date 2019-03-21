@@ -1,6 +1,6 @@
 package model.Objet;
 
-public class Objet {
+abstract public class Objet {
     protected String nom;
 
     public String getNom() {
@@ -10,6 +10,8 @@ public class Objet {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
+    public Objet(){}
 
     public Objet(String nom){
         this.nom = nom;
