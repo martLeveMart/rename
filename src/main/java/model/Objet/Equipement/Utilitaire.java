@@ -3,6 +3,13 @@ package model.Objet.Equipement;
 import model.Objet.Objet;
 import model.Personnage.Personnage;
 
+/*Déclaration des méthodes
+History:
+        1.0 : 21/03/2019
+            déclaration des méthodes :
+                * Objet(string nom, int life) : constructeur
+                * utiliser: utilise l'objet
+*/
 public class Utilitaire extends Objet {
     protected int life;
 

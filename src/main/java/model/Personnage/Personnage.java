@@ -17,6 +17,10 @@ History:
             déclaration des méthodes :
                 *coup: inflige des dégats physiques à l'adversaire
                 * calcPhyDmg() retour les dégats physique du perso
+
+        1.2 : 21/03/2019
+            déclaration des méthodes :
+                * soigner: remonte la vie du Personnage
 */
 
 abstract public class Personnage {

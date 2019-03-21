@@ -1,5 +1,12 @@
 package model.Objet;
 
+/*Déclaration des méthodes
+History:
+        1.0 : 21/03/2019
+            déclaration des méthodes :
+                *Objet : Le constructeur par défaut de Objet
+                *Objet(string nom) : constructeur
+*/
 abstract public class Objet {
     protected String nom;
 

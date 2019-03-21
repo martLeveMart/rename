@@ -17,6 +17,12 @@ Historique:
                 *TraitMagique: inflige des dégats magiques à l'adversaire
                 *SurchargeMagique: détermine si il reste du mana au mage
 
+            1.1 : 16/03/2019
+                Ajout attribut:
+                * mana: le mana actuel du mage
+                * manaMax: le mana maximal du mage
+                * activeSurcharge: quand activé paie des pv pour lancer des sorts
+
                 //pas encore ajouter
                 Ajout d'un objet inventaire
                     *Mage(string nom, int mana, int vie, Objet): constructeur 2

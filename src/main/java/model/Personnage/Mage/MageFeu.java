@@ -4,11 +4,6 @@ package model.Personnage.Mage;
 Déclaration des méthodes
 Historique:
 
-            1.0 - 09/12/2019
-                Déclaration de méthode:
-                    *MageDeFeu, construceur par défaut de la classe
-                    *~MageDeFeu, destructeur de la classe
-
             1.1 - 10/12/2016
                 Déclarations des méthodes:
                     *MageDeFeu(string nom), construceur de surcharge 1
