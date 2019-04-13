@@ -1,6 +1,6 @@
-package model.Objet.Equipement;
+package model.objet.equipement;
 
-import model.Personnage.Mage.Mage;
+import model.personnage.mage.Mage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

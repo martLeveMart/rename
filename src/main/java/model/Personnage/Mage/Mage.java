@@ -1,6 +1,6 @@
-package model.Personnage.Mage;
+package model.personnage.mage;
 
-import model.Personnage.Personnage;
+import model.personnage.Personnage;
 
 import java.util.Scanner;
 

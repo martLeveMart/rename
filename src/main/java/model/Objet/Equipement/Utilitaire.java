@@ -1,7 +1,7 @@
-package model.Objet.Equipement;
+package model.objet.equipement;
 
-import model.Objet.Objet;
-import model.Personnage.Personnage;
+import model.objet.Objet;
+import model.personnage.Personnage;
 
 /*Déclaration des méthodes
 History:

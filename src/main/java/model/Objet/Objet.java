@@ -1,4 +1,4 @@
-package model.Objet;
+package model.objet;
 
 /*Déclaration des méthodes
 History:
@@ -7,7 +7,7 @@ History:
                 *Objet : Le constructeur par défaut de Objet
                 *Objet(string nom) : constructeur
 */
-abstract public class Objet {
+public abstract class Objet {
     protected String nom;
 
     public String getNom() {

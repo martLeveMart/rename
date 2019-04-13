@@ -1,4 +1,4 @@
-package model.Personnage.Mage;
+package model.personnage.mage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package model.Personnage;
+package model.personnage;
 
 public class PersonnageTest {
 }
