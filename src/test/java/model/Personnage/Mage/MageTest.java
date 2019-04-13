@@ -129,6 +129,5 @@ public class MageTest {
         Mage mage = new Mage();
 
         Boolean isActiv = mage.isActiveSurcharge();
-        mage.presentation();
     }
 }

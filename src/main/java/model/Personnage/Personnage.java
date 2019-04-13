@@ -23,7 +23,7 @@ History:
                 * soigner: remonte la vie du Personnage
 */
 
-abstract public class Personnage {
+public abstract class Personnage {
 
     protected String name;
     protected int life;
@@ -50,9 +50,9 @@ abstract public class Personnage {
         this.setLife(this.getLife() + life);
     }
 
-    abstract public int calcPhyDmg();
+    public abstract int calcPhyDmg();
 
-    abstract protected int calcMagDmg();
+    protected abstract int calcMagDmg();
 
     /*
     Déclaration des contructeurs
@@ -121,19 +121,5 @@ abstract public class Personnage {
         this.life = life > lifeMax ? lifeMax : life;
         //TODO pour détruire l'objet il faudrat le retirer de l'objet world auquel il sera associé
         //à faire quand le monde sera créer en attend test des hp (si trop chiant ajouter un bool vivant)
-    }
-
-    //TODO a supprime quand plus de test à effectuer
-    /*
-     Retourne la liste des différents stats
-     */
-    public void presentation(){
-        String pres = "Je m'appel " + name + ", je possède " + life + " point de vie.";
-        System.out.println(pres);
-    }
-
-    public void getStat(){
-        System.out.println("Force : " + this.streng);
-        System.out.println("Inteligence : " + this.intell);
     }
 }

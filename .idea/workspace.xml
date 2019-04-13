@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d631c7c-6108-42ec-b6a3-e648642f5397" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Objet/Objet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Objet/Objet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/personnage/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/personnage/Personnage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,6 +13,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/name$MageTest__1_.ic" NAME="MageTest (1) Coverage Results" MODIFIED="1555162177629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>model.personnage.mage.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/test$UtilitaireTest_utiliser.ic" NAME="UtilitaireTest.utiliser Coverage Results" MODIFIED="1553201874505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>model.Objet.Equipement.*</FILTER>
     </SUITE>
@@ -28,11 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/personnage/mage/Mage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1204">
+              <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -76,16 +76,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/personnage/Personnage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="322">
+              <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/model/objet/equipement/UtilitaireTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
@@ -141,6 +141,7 @@
     <findStrings>
       <find>com</find>
       <find>mycompany</find>
+      <find>pre</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,19 +167,19 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/model/Objet/Objet.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/objet/Objet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/personnage/Personnage.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/objet/Equipement/Utilitaire.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/personnage/Mage/Mage.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/personnage/Mage/MageFeu.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/personnage/Mage/MageGlace.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/personnage/mage/Mage.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/personnage/mage/MageFeu.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/personnage/mage/MageGlace.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/objet/equipement/Utilitaire.java" />
         <option value="$PROJECT_DIR$/src/test/java/model/personnage/PersonnageTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/model/objet/equipement/UtilitaireTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/model/personnage/mage/MageTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/personnage/mage/Mage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/personnage/Personnage.java" />
       </list>
     </option>
   </component>
@@ -332,7 +333,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555161735824" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555162184509" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -360,7 +361,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitaireTest.utiliser">
+  <component name="RunManager" selected="JUnit.MageTest (1)">
+    <configuration name="MageTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.personnage.mage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model.personnage.mage" />
+      <option name="MAIN_CLASS_NAME" value="model.personnage.mage.MageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="my-app" />
       <extension name="coverage">
@@ -410,11 +426,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MageTest (1)" />
         <item itemvalue="JUnit.UtilitaireTest.utiliser" />
         <item itemvalue="JUnit.MageTest.testMageTestFin" />
         <item itemvalue="JUnit.MageTest" />
         <item itemvalue="JUnit.UtilitaireTest.utiliser" />
-        <item itemvalue="JUnit.MageTest.testMageTestFin" />
       </list>
     </recent_temporary>
   </component>
@@ -433,7 +449,7 @@
       <workItem from="1552692622336" duration="1500000" />
       <workItem from="1553244834575" duration="580000" />
       <workItem from="1553267859380" duration="9000" />
-      <workItem from="1555159523774" duration="2073000" />
+      <workItem from="1555159523774" duration="2403000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1552691960369</created>
@@ -498,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555160880304</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="sonar">
+      <created>1555161780904</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555161780904</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -534,7 +557,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11044000" />
+    <option name="totallyTimeSpent" value="11374000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -624,7 +647,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="ajout première Objet" />
     <MESSAGE value="travis" />
-    <option name="LAST_COMMIT_MESSAGE" value="travis" />
+    <MESSAGE value="sonar" />
+    <option name="LAST_COMMIT_MESSAGE" value="sonar" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/model/tyr.java" />
@@ -641,13 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/personnage/Personnage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -682,16 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/personnage/mage/Mage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -723,6 +730,20 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/personnage/mage/Mage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1204">
+          <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/personnage/Personnage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
         </state>
       </provider>
     </entry>

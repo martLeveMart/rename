@@ -2,8 +2,6 @@ package model.personnage.mage;
 
 import model.personnage.Personnage;
 
-import java.util.Scanner;
-
 /* Déclaration des méthodes
 Historique:
 
@@ -50,14 +48,15 @@ public class Mage extends Personnage {
     }
 
     void traitMagique(Personnage cible){
-        int COUT = 10;
+        int cout = 10;
 
-        if (mana > COUT){
-            mana -= COUT;
+        if (mana > cout){
+            mana -= cout;
             cible.takeDmg(this.calcMagDmg());
-        }else if (this.surchargeMagique(COUT)){
+        }else if (this.surchargeMagique(cout)){
             cible.takeDmg(this.calcMagDmg());
         }else{
+            //TODO remplacer par un logger ou une exception
             System.out.println("Pas assez de mana");
         }
     }
@@ -101,6 +100,7 @@ public class Mage extends Personnage {
         this.mana = mana > manaMax ? manaMax : mana;
     }
 
+    @Override
     public void setIntell(int intell) {
         if (intell < 0)
             intell = 0;
@@ -130,12 +130,5 @@ public class Mage extends Personnage {
             mana = 0;
         this.manaMax = mana + this.intell/2;
         this.mana = this.manaMax;
-    }
-
-    //TODO à virer V1 finit
-    public void presentation(){
-        super.presentation();
-        String pres = "J'ai " + mana + " point de mana.";
-        System.out.println(pres);
     }
 }
