@@ -9,24 +9,6 @@ public class MageTest {
 
     @ParameterizedTest
     @CsvSource({
-            "50, 50",
-            "150, 0",
-            "-20, 100"
-    })
-    public void testTakeDmg(int dmg, int life){
-        //Given
-        Mage mage = new Mage("Merlin", 100);
-
-        //When
-        mage.takeDmg(dmg);
-
-        //Then
-        Assertions.assertEquals(life, mage.getLife());
-
-    }
-
-    @ParameterizedTest
-    @CsvSource({
             "50, 125, 150",
             "21, 110, 120",
             "-21, 110, 110",
@@ -42,26 +24,6 @@ public class MageTest {
         //Then
         Assertions.assertEquals(manaMax, mage.getManaMax());
 
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-            "150, 15, 85",
-            "105, 11, 89",
-            "-20, 0, 100"
-    })
-    public void testCoup(int force, int dmg, int life){
-        //Given
-        Mage mageAtt = new Mage("Barnabeus", 100);
-        Mage mageDef = new Mage("Merlin", 100);
-
-        //When
-        mageAtt.setStreng(force);
-        mageAtt.coup(mageDef);
-
-        //Then
-        Assertions.assertEquals(dmg, mageAtt.calcPhyDmg());
-        Assertions.assertEquals(life, mageDef.getLife());
     }
 
     @ParameterizedTest

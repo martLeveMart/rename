@@ -27,7 +27,7 @@ public abstract class Personnage {
 
     protected String name;
     protected int life;
-    protected int lifeMax;
+    protected int lifeMax = 100;
 
     //attribut afficher
     protected int streng;
@@ -47,6 +47,8 @@ public abstract class Personnage {
     }
 
     public void soigner(int life){
+        if (life < 0)
+            life = 0;
         this.setLife(this.getLife() + life);
     }
 
