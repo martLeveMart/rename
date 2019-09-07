@@ -1,6 +1,6 @@
-package model.personnage.mage;
+package model.Personnage.Mage;
 
-import model.personnage.Personnage;
+import model.Personnage.Personnage;
 
 /* Déclaration des méthodes
 Historique:

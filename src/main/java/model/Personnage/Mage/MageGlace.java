@@ -1,4 +1,4 @@
-package model.personnage.mage;
+package model.Personnage.Mage;
 
 /*
 Déclaration des méthodes

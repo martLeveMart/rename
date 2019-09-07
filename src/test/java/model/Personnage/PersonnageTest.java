@@ -1,8 +1,6 @@
-package model.personnage;
+package model.Personnage;
 
-import model.personnage.mage.Mage;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

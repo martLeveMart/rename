@@ -1,4 +1,4 @@
-package model.objet;
+package model.Objet;
 
 /*Déclaration des méthodes
 History:

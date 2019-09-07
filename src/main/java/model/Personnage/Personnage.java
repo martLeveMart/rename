@@ -1,4 +1,4 @@
-package model.personnage;
+package model.Personnage;
 
 /*Déclaration des méthodes
 History:

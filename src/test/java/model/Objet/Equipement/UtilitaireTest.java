@@ -1,12 +1,9 @@
-package model.objet.equipement;
+package model.Objet.Equipement;
 
-import model.personnage.mage.Mage;
+import model.Personnage.Mage.Mage;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class UtilitaireTest {
 
