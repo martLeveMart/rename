@@ -1,5 +1,6 @@
 package model.Personnage;
 
+import net.bytebuddy.implementation.bind.annotation.RuntimeType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
